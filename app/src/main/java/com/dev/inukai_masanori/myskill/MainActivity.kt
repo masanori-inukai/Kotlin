@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ListView
 import com.dev.inukai_masanori.myskill.Data.Article
 import com.dev.inukai_masanori.myskill.Data.User
+import com.dev.inukai_masanori.myskill.UI.ArticleActivity
 import com.dev.inukai_masanori.myskill.UI.ArticleListAdapter
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +18,12 @@ class MainActivity : AppCompatActivity() {
         listAdapter.articles = listOf(dummy(), dummy())
         val listView = findViewById(R.id.list_view) as ListView
         listView.adapter = listAdapter
+        listView.setOnItemClickListener { _, _, position, _ ->
+            val article = listAdapter.articles[position]
+            ArticleActivity.intent(context = this, article = article).let {
+                startActivity(it)
+            }
+        }
     }
 
     private fun dummy(): Article {

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <sample.qiitaclient.view.ArticleView
+    <com.dev.inukai_masanori.myskill.UI.ArticleView
         android:id="@+id/article_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

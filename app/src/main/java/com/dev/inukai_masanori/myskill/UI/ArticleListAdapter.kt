@@ -6,9 +6,6 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import com.dev.inukai_masanori.myskill.Data.Article
 
-/**
- * Created by inukai_masanori on 2017/06/26.
- */
 class ArticleListAdapter (private val context: Context) : BaseAdapter() {
 
     var articles: List<Article> = emptyList()
