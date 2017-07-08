@@ -8,8 +8,16 @@ import android.webkit.WebView
 import com.dev.inukai_masanori.myskill.Data.Article
 import com.dev.inukai_masanori.myskill.R
 
+/*
+    【記事詳細】
+    リストから選択後のページ
+ */
 class ArticleActivity : AppCompatActivity() {
 
+    /*
+        シングルトン
+        Staticフィールド
+     */
     companion object {
 
         private const val ARTICLE_EXTRA: String = "article"
@@ -19,6 +27,10 @@ class ArticleActivity : AppCompatActivity() {
         }
     }
 
+    /*
+        【by lazy】(Property Delegation)
+        遅延実行のしくみ。このプロパティに始めてアクセスされた時にブロックが実行される。
+     */
     private val articleView: ArticleView by lazy { findViewById(R.id.article_view) as ArticleView }
     private val webView: WebView by lazy { findViewById(R.id.web_view) as WebView }
 
