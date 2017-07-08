@@ -6,8 +6,13 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import com.dev.inukai_masanori.myskill.Data.Article
 
+/*
+    検索結果のリストを保持するためのクラス。
 
-class ArticleListAdapter (/* プライマリーコンストラクタ */ private val context: Context) : BaseAdapter() {
+    【プライマリーコンストラクタ】
+    プライマリコンストラクタでは、val, varといったプロパティの定義やCompanion objectの定義や初期化ができる。
+ */
+class ArticleListAdapter (private val context: Context) : BaseAdapter() {
 
     /* 空のリストを作成 */
     var articles: List<Article> = emptyList()
